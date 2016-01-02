@@ -5,6 +5,7 @@ def raw2jpg(file_or_dir)
     ((Dir.entries file_or_dir) - ['.', '..']).each do |entry|
         raw2jpg(File.join(file_or_dir, entry))
     end
+    puts "#{file_or_dir} is proccessed"
   end
 
   if raw_file?(file_or_dir)

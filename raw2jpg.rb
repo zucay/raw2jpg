@@ -20,5 +20,7 @@ def raw_file?(path)
 end
 
 if __FILE__ == $0
-  raw2jpg(ARGV[0])
+  ARGV.each do |argv|
+    raw2jpg argv
+  end
 end
